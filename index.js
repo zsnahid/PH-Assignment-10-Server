@@ -40,9 +40,19 @@ async function run() {
     });
 
     app.get("/equipments/:id", async (req, res) => {
-      id = req.params.id;
+      const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await equipments.findOne(query);
+      res.send(result);
+    });
+
+    app.get("/equipmentsByEmail/filter", async (req, res) => {
+      const email = req.query.email;
+      console.log(email);
+      // const newEmail = email.concat(".com");
+      const query = { userEmail: email };
+      const cursor = equipments.find(query);
+      const result = await cursor.toArray();
       res.send(result);
     });
 
