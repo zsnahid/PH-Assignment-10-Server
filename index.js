@@ -39,6 +39,12 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/equipmentsForHome", async (req, res) => {
+      const cursor = equipments.find().limit(6);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
     app.get("/equipments/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
@@ -60,6 +66,27 @@ async function run() {
       const newEquipment = req.body;
       console.log("adding new equipment", newEquipment);
       const result = await equipments.insertOne(newEquipment);
+      res.send(result);
+    });
+
+    app.put("/equipments/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedEquipment = req.body;
+      console.log(updatedEquipment);
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updatedDoc = {
+        $set: req.body,
+      };
+
+      const result = await equipments.updateOne(filter, updatedDoc, options);
+      res.send(result);
+    });
+
+    app.delete("/equipments/:id", async (req, res) => {
+      id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await equipments.deleteOne(query);
       res.send(result);
     });
   } finally {
