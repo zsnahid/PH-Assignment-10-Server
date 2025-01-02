@@ -22,9 +22,9 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
@@ -39,8 +39,24 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/equipmentsForHome", async (req, res) => {
+    app.get("/equipments/filter", async (req, res) => {
+      const email = req.query.email;
+      // console.log(email);
+      // const newEmail = email.concat(".com");
+      const query = { userEmail: email };
+      const cursor = equipments.find(query);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+    app.get("/equipments-for-home", async (req, res) => {
       const cursor = equipments.find().limit(6);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+    app.get("/equipments-sorted", async (req, res) => {
+      const cursor = equipments.find().sort({ price: 1 });
       const result = await cursor.toArray();
       res.send(result);
     });
@@ -52,27 +68,16 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/equipmentsByEmail/filter", async (req, res) => {
-      const email = req.query.email;
-      console.log(email);
-      // const newEmail = email.concat(".com");
-      const query = { userEmail: email };
-      const cursor = equipments.find(query);
-      const result = await cursor.toArray();
-      res.send(result);
-    });
-
     app.post("/equipments", async (req, res) => {
       const newEquipment = req.body;
-      console.log("adding new equipment", newEquipment);
+      // console.log("adding new equipment", newEquipment);
       const result = await equipments.insertOne(newEquipment);
       res.send(result);
     });
 
+
     app.put("/equipments/:id", async (req, res) => {
       const id = req.params.id;
-      const updatedEquipment = req.body;
-      console.log(updatedEquipment);
       const filter = { _id: new ObjectId(id) };
       const options = { upsert: true };
       const updatedDoc = {
