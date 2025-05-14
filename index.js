@@ -5,7 +5,13 @@ const cors = require("cors");
 const app = express();
 const port = process.env.port || 3000;
 
-app.use(cors());
+// CORS configuration
+app.use(
+  cors({
+    origin: true, // This will copy the Origin header from the request
+    credentials: false, // Setting this to false since we're not using credentials
+  })
+);
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.h1aou.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
@@ -41,8 +47,6 @@ async function run() {
 
     app.get("/equipments/filter", async (req, res) => {
       const email = req.query.email;
-      // console.log(email);
-      // const newEmail = email.concat(".com");
       const query = { userEmail: email };
       const cursor = equipments.find(query);
       const result = await cursor.toArray();
@@ -61,6 +65,42 @@ async function run() {
       res.send(result);
     });
 
+    // Search endpoint for equipments - must be before :id route
+    app.get("/equipments/search", async (req, res) => {
+      try {
+        const { q } = req.query;
+
+        if (!q) {
+          return res.status(400).json({
+            success: false,
+            message: "Search query is required",
+          });
+        }
+
+        const searchQuery = {
+          $or: [
+            { item: { $regex: q, $options: "i" } },
+            { category: { $regex: q, $options: "i" } },
+          ],
+        };
+
+        const cursor = equipments.find(searchQuery).limit(10);
+        const results = await cursor.toArray();
+
+        res.json({
+          success: true,
+          data: results,
+        });
+      } catch (error) {
+        console.error("Search error:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
+    });
+
+    // Get equipment by ID - must be after search route
     app.get("/equipments/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
@@ -70,11 +110,9 @@ async function run() {
 
     app.post("/equipments", async (req, res) => {
       const newEquipment = req.body;
-      // console.log("adding new equipment", newEquipment);
       const result = await equipments.insertOne(newEquipment);
       res.send(result);
     });
-
 
     app.put("/equipments/:id", async (req, res) => {
       const id = req.params.id;

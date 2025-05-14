@@ -1,0 +1,181 @@
+{
+  "equipments": [
+    {
+      "image": "https://example.com/image.jpg",
+      "galleryImages": [
+        "https://example.com/gallery1.jpg",
+        "https://example.com/gallery2.jpg"
+      ],
+      "item": "Professional Basketball",
+      "category": "Sports Equipment",
+      "brand": "Nike",
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "description": "Professional grade basketball with superior grip and durability",
+      "features": "Anti-slip surface\nOfficial size and weight\nIndoor/Outdoor use",
+      "specifications": "Size: 29.5 inches\nWeight: 22 oz\nMaterial: Premium composite leather",
+      "sizes": ["Official Size 7", "Official Size 6", "Youth Size 5"],
+      "colors": ["Orange", "Brown", "Black"],
+      "stockQuantity": 100,
+      "minimumOrder": 1,
+      "warranty": "1 year manufacturer warranty",
+      "shippingInfo": "Free shipping on orders over $50",
+      "stockStatus": "In Stock",
+      "userEmail": "user@example.com",
+      "userName": "John Doe",
+      "rating": 4.5,
+      "processingTime": "2-3 business days",
+      "customization": "Available for team logos",
+      "createdAt": "2025-05-14T10:00:00Z"
+    }
+  ],
+  "categories": [
+    "Sports Equipment",
+    "Fitness Gear",
+    "Team Sports",
+    "Training Equipment",
+    "Outdoor Sports",
+    "Athletic Wear",
+    "Accessories"
+  ],
+  "stockStatuses": ["In Stock", "Out of Stock", "Pre-order", "Discontinued"],
+  "schema": {
+    "type": "object",
+    "required": [
+      "image",
+      "item",
+      "category",
+      "brand",
+      "price",
+      "description",
+      "stockQuantity",
+      "minimumOrder",
+      "stockStatus",
+      "userEmail",
+      "userName"
+    ],
+    "properties": {
+      "image": {
+        "type": "string",
+        "format": "uri",
+        "description": "Main product image URL"
+      },
+      "galleryImages": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        },
+        "description": "Additional product images"
+      },
+      "item": {
+        "type": "string",
+        "minLength": 3,
+        "description": "Product name"
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "Sports Equipment",
+          "Fitness Gear",
+          "Team Sports",
+          "Training Equipment",
+          "Outdoor Sports",
+          "Athletic Wear",
+          "Accessories"
+        ]
+      },
+      "brand": {
+        "type": "string",
+        "description": "Product brand name"
+      },
+      "price": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Current selling price"
+      },
+      "originalPrice": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Original price before discount"
+      },
+      "description": {
+        "type": "string",
+        "description": "Detailed product description"
+      },
+      "features": {
+        "type": "string",
+        "description": "Product features (line separated)"
+      },
+      "specifications": {
+        "type": "string",
+        "description": "Technical specifications (line separated)"
+      },
+      "sizes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Available sizes"
+      },
+      "colors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Available colors"
+      },
+      "stockQuantity": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Number of items in stock"
+      },
+      "minimumOrder": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Minimum quantity per order"
+      },
+      "warranty": {
+        "type": "string",
+        "description": "Warranty information"
+      },
+      "shippingInfo": {
+        "type": "string",
+        "description": "Shipping details and policies"
+      },
+      "stockStatus": {
+        "type": "string",
+        "enum": ["In Stock", "Out of Stock", "Pre-order", "Discontinued"],
+        "description": "Current stock status"
+      },
+      "userEmail": {
+        "type": "string",
+        "format": "email",
+        "description": "Email of the user adding the product"
+      },
+      "userName": {
+        "type": "string",
+        "description": "Name of the user adding the product"
+      },
+      "rating": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 5,
+        "description": "Product rating (0-5)"
+      },
+      "processingTime": {
+        "type": "string",
+        "description": "Order processing time"
+      },
+      "customization": {
+        "type": "string",
+        "description": "Available customization options"
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Timestamp when the product was added"
+      }
+    }
+  }
+}

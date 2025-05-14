@@ -1,0 +1,164 @@
+{
+  "equipments": [
+    {
+      "image": "https://images.unsplash.com/photo-1494955464529-790512c65305",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1519766304817-4f37bda74a36",
+        "https://images.unsplash.com/photo-1574629810360-7efbbe195018"
+      ],
+      "item": "Professional Basketball",
+      "category": "Sports Equipment",
+      "brand": "Wilson",
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "description": "Official size and weight basketball with superior grip and durability. Perfect for indoor and outdoor play.",
+      "features": "Anti-slip surface\nOfficial NBA size\nAll-surface grip technology",
+      "specifications": "Size: 29.5 inches\nWeight: 22 oz\nMaterial: Premium composite leather",
+      "sizes": ["Official Size 7", "Official Size 6"],
+      "colors": ["Orange", "Brown"],
+      "stockQuantity": 150,
+      "minimumOrder": 1,
+      "warranty": "1 year manufacturer warranty",
+      "shippingInfo": "Free shipping on orders over $50",
+      "stockStatus": "In Stock",
+      "rating": 4.8,
+      "processingTime": "1-2 business days",
+      "customization": "Available for team logos"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1593079831268-3381b0db4a77",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b"
+      ],
+      "item": "Premium Yoga Mat",
+      "category": "Fitness Gear",
+      "brand": "Lululemon",
+      "price": 68.0,
+      "originalPrice": 75.0,
+      "description": "Extra thick, non-slip yoga mat perfect for all types of yoga and floor exercises.",
+      "features": "6mm thickness\nNon-slip surface\nEasy to clean\nCarrying strap included",
+      "specifications": "Length: 72 inches\nWidth: 24 inches\nThickness: 6mm\nMaterial: Eco-friendly TPE",
+      "colors": ["Purple", "Blue", "Black", "Pink"],
+      "stockQuantity": 75,
+      "minimumOrder": 1,
+      "warranty": "30-day satisfaction guarantee",
+      "shippingInfo": "Ships within 24 hours",
+      "stockStatus": "In Stock",
+      "rating": 4.9,
+      "processingTime": "Same day"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1579546929662-711aa81148cf"
+      ],
+      "item": "Complete Soccer Kit",
+      "category": "Team Sports",
+      "brand": "Adidas",
+      "price": 89.99,
+      "originalPrice": 120.0,
+      "description": "Professional soccer team kit including jersey, shorts, and socks.",
+      "features": "Moisture-wicking fabric\nBreathable mesh panels\nTeam customization available",
+      "specifications": "Material: 100% Polyester\nBreathable technology\nQuick-dry fabric",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Red/White", "Blue/White", "Green/White"],
+      "stockQuantity": 200,
+      "minimumOrder": 11,
+      "warranty": "Quality guarantee",
+      "shippingInfo": "Bulk shipping available",
+      "stockStatus": "In Stock",
+      "rating": 4.7,
+      "processingTime": "3-5 business days",
+      "customization": "Team names and numbers available"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff"
+      ],
+      "item": "Olympic Weight Set",
+      "category": "Training Equipment",
+      "brand": "Rogue Fitness",
+      "price": 799.99,
+      "originalPrice": 899.99,
+      "description": "Complete Olympic weight set with barbell and plates.",
+      "features": "Premium rubber-coated plates\nStainless steel barbell\nQuick-lock collars included",
+      "specifications": "Total weight: 320 lbs\nBarbell weight: 45 lbs\nPlate pairs: 2.5, 5, 10, 25, 35, 45 lbs",
+      "colors": ["Black"],
+      "stockQuantity": 25,
+      "minimumOrder": 1,
+      "warranty": "5 year warranty on barbell, 2 years on plates",
+      "shippingInfo": "Freight shipping required",
+      "stockStatus": "In Stock",
+      "rating": 4.9,
+      "processingTime": "5-7 business days"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1542144582-1ba00456b5e3",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1542144582-1ba00456b5e3"
+      ],
+      "item": "Premium Hiking Backpack",
+      "category": "Outdoor Sports",
+      "brand": "The North Face",
+      "price": 129.99,
+      "originalPrice": 159.99,
+      "description": "65L hiking backpack with hydration system compatibility.",
+      "features": "Waterproof construction\nMultiple compartments\nPadded shoulder straps\nHip belt included",
+      "specifications": "Capacity: 65L\nWeight: 4.5 lbs\nMaterial: Ripstop nylon",
+      "colors": ["Forest Green", "Black", "Navy"],
+      "stockQuantity": 45,
+      "minimumOrder": 1,
+      "warranty": "Lifetime warranty",
+      "shippingInfo": "Free standard shipping",
+      "stockStatus": "In Stock",
+      "rating": 4.8,
+      "processingTime": "1-3 business days"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1515468381879-40d0ded81044",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1515468381879-40d0ded81044"
+      ],
+      "item": "Performance Running Shorts",
+      "category": "Athletic Wear",
+      "brand": "Nike",
+      "price": 34.99,
+      "originalPrice": 44.99,
+      "description": "Lightweight running shorts with built-in compression liner.",
+      "features": "4-way stretch fabric\nMoisture-wicking\nZip pocket\nReflective details",
+      "specifications": "Material: 86% Polyester, 14% Spandex\nInseam: 7 inches\nBuilt-in brief liner",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Black", "Navy", "Grey", "Blue"],
+      "stockQuantity": 200,
+      "minimumOrder": 1,
+      "warranty": "30-day return policy",
+      "shippingInfo": "Free standard shipping",
+      "stockStatus": "In Stock",
+      "rating": 4.6,
+      "processingTime": "1-2 business days"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
+      ],
+      "item": "Sports Water Bottle",
+      "category": "Accessories",
+      "brand": "Hydro Flask",
+      "price": 39.99,
+      "originalPrice": 44.99,
+      "description": "Vacuum-insulated stainless steel water bottle, perfect for sports and outdoor activities.",
+      "features": "24-hour cold retention\nLeakproof cap\nSweat-free design\nBPA-free",
+      "specifications": "Capacity: 32 oz\nMaterial: 18/8 Stainless Steel\nDouble-wall vacuum insulation",
+      "colors": ["Black", "White", "Blue", "Red", "Green"],
+      "stockQuantity": 300,
+      "minimumOrder": 1,
+      "warranty": "Lifetime warranty",
+      "shippingInfo": "Free standard shipping",
+      "stockStatus": "In Stock",
+      "rating": 4.9,
+      "processingTime": "Same day"
+    }
+  ]
+}
