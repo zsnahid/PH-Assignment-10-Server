@@ -38,6 +38,8 @@ async function run() {
     const database = client.db("assignment10db");
     const equipments = database.collection("equipments");
     const users = database.collection("users");
+    const reviews = database.collection("reviews");
+    const blogPosts = database.collection("blogPosts");
 
     app.get("/equipments", async (req, res) => {
       const cursor = equipments.find();
@@ -60,9 +62,59 @@ async function run() {
     });
 
     app.get("/equipments-sorted", async (req, res) => {
-      const cursor = equipments.find().sort({ price: 1 });
+      const cursor = equipments.find().sort({ rating: -1, price: -1 });
       const result = await cursor.toArray();
       res.send(result);
+    });
+
+    // Get all categories with their details
+    app.get("/categories", async (req, res) => {
+      try {
+        const categories = await equipments
+          .aggregate([
+            {
+              $group: {
+                _id: "$category",
+                name: { $first: "$category" },
+                image: { $first: "$image" },
+                productCount: { $sum: 1 },
+              },
+            },
+            {
+              $project: {
+                _id: 1,
+                name: 1,
+                image: 1,
+                productCount: 1,
+              },
+            },
+          ])
+          .toArray();
+
+        res.json(categories);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
+    });
+
+    // Get products by category
+    app.get("/equipments/category/:category", async (req, res) => {
+      try {
+        const category = req.params.category;
+        const query = { category: { $regex: new RegExp(category, "i") } };
+        const result = await equipments.find(query).toArray();
+        res.json(result);
+      } catch (error) {
+        console.error("Error fetching products by category:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
     });
 
     // Search endpoint for equipments - must be before :id route
@@ -93,6 +145,32 @@ async function run() {
         });
       } catch (error) {
         console.error("Search error:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
+    });
+
+    // Get all equipment with discounted prices
+    app.get("/equipments/discounted", async (req, res) => {
+      try {
+        const query = { price: { $lt: "$originalPrice" } };
+
+        // Using $expr to compare fields within the same document
+        const discountedItems = await equipments
+          .find({
+            $expr: { $lt: ["$price", "$originalPrice"] },
+          })
+          .toArray();
+
+        res.json({
+          success: true,
+          count: discountedItems.length,
+          data: discountedItems,
+        });
+      } catch (error) {
+        console.error("Error fetching discounted equipment:", error);
         res.status(500).json({
           success: false,
           message: "Internal server error",
@@ -131,6 +209,75 @@ async function run() {
       const query = { _id: new ObjectId(id) };
       const result = await equipments.deleteOne(query);
       res.send(result);
+    });
+
+    // Get all reviews for carousel
+    app.get("/reviews", async (req, res) => {
+      try {
+        const result = await reviews
+          .aggregate([
+            {
+              $unwind: "$reviews",
+            },
+            {
+              $project: {
+                product: 1,
+                brand: 1,
+                review: "$reviews",
+              },
+            },
+            {
+              $sort: { "review.date": -1 },
+            },
+            {
+              $limit: 10,
+            },
+          ])
+          .toArray();
+
+        res.json(result);
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
+    });
+
+    // Get all blog posts
+    app.get("/blog-posts", async (req, res) => {
+      try {
+        const result = await blogPosts
+          .find()
+          .sort({ publishDate: -1 })
+          .toArray();
+        res.json(result);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
+    });
+
+    // Get single blog post by ID
+    app.get("/blog-posts/:id", async (req, res) => {
+      try {
+        const id = req.params.id;
+        const result = await blogPosts.findOne({ _id: new ObjectId(id) });
+        if (!result) {
+          return res.status(404).json({ message: "Blog post not found" });
+        }
+        res.json(result);
+      } catch (error) {
+        console.error("Error fetching blog post:", error);
+        res.status(500).json({
+          success: false,
+          message: "Internal server error",
+        });
+      }
     });
   } finally {
     // Ensures that the client will close when you finish/error

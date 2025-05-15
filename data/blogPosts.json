@@ -1,0 +1,82 @@
+[
+  {
+    "title": "The Ultimate Guide to Choosing the Right Leggings for Your Workout",
+    "summary": "Discover how to pick leggings based on activity type, fabric technology, and fit for maximum performance and comfort.",
+    "content": "From high-intensity workouts to yoga sessions, not all leggings are created equal. Learn about compression levels, moisture-wicking fabrics, and seam placements that make a difference in your performance.",
+    "image": "https://images.unsplash.com/photo-1593810450967-f9c42742e326",
+    "category": "Fitness Gear",
+    "tags": ["leggings", "workout clothes", "activewear"],
+    "publishDate": "2025-05-10",
+    "author": "Sarah Johnson"
+  },
+  {
+    "title": "5 Ways to Style Activewear for Everyday Outfits",
+    "summary": "Transform your workout clothes into chic streetwear with these easy styling tips from fashion influencers.",
+    "content": "Activewear isn't just for the gym anymore. See how to pair leggings with oversized blazers, layer sports bras under sheer tops, and accessorize for a polished athleisure look.",
+    "image": "https://images.unsplash.com/photo-1542295669297-4d352b042bca",
+    "category": "Style Guide",
+    "tags": ["athleisure", "street style", "fashion"],
+    "publishDate": "2025-04-28",
+    "author": "Michael Chen"
+  },
+  {
+    "title": "The Science Behind Moisture-Wicking Fabrics",
+    "summary": "How technical fabrics keep you dry and comfortable during intense workouts.",
+    "content": "Explore the engineering behind performance fabrics that pull sweat away from your skin, regulate body temperature, and prevent odor buildup during exercise.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    "category": "Fabric Technology",
+    "tags": ["performance", "fabric", "innovation"],
+    "publishDate": "2025-04-15",
+    "author": "Dr. Emily Rodriguez"
+  },
+  {
+    "title": "Top 10 Activewear Brands Dominating 2025",
+    "summary": "From established giants to emerging favorites - these are the brands worth investing in this year.",
+    "content": "We analyze the top performers in activewear based on innovation, sustainability efforts, celebrity endorsements, and customer satisfaction ratings.",
+    "image": "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891",
+    "category": "Brand Spotlight",
+    "tags": ["brands", "trends", "2025"],
+    "publishDate": "2025-03-30",
+    "author": "The Editorial Team"
+  },
+  {
+    "title": "How to Care for Your Technical Activewear",
+    "summary": "Extend the life of your performance wear with these washing and storage tips.",
+    "content": "Learn the dos and don'ts of caring for compression fabrics, mesh panels, and moisture-wicking materials to maintain their functionality and appearance.",
+    "image": "https://images.unsplash.com/photo-1604176354204-9268737828e4",
+    "category": "Care Guide",
+    "tags": ["laundry", "maintenance", "longevity"],
+    "publishDate": "2025-03-18",
+    "author": "Lisa Wong"
+  },
+  {
+    "title": "The Rise of Sustainable Activewear: What to Look For",
+    "summary": "How eco-conscious brands are revolutionizing fitness fashion with recycled materials and ethical production.",
+    "content": "Discover which certifications matter, which sustainable fabrics perform best, and how to identify genuinely eco-friendly brands versus greenwashers.",
+    "image": "https://images.unsplash.com/photo-1605000797499-95a51c5269ae",
+    "category": "Sustainability",
+    "tags": ["eco-friendly", "recycled", "ethical"],
+    "publishDate": "2025-02-25",
+    "author": "Jamal Green"
+  },
+  {
+    "title": "Workout Outfit Ideas for Every Type of Exercise",
+    "summary": "From pilates to powerlifting - the perfect activewear combinations for your favorite activities.",
+    "content": "Specialized recommendations for different workouts including ideal fabric weights, support levels, and coverage needs for yoga, running, HIIT and more.",
+    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b",
+    "category": "Fitness Guide",
+    "tags": ["outfits", "workouts", "exercise"],
+    "publishDate": "2025-02-10",
+    "author": "Taylor Fitness"
+  },
+  {
+    "title": "The Psychology Behind Activewear Colors and Performance",
+    "summary": "How different colors can affect your workout mindset and energy levels.",
+    "content": "Research shows that certain colors can boost confidence, increase intensity, or promote calmness during different types of training sessions.",
+    "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5",
+    "category": "Performance Psychology",
+    "tags": ["color theory", "motivation", "mindset"],
+    "publishDate": "2025-01-28",
+    "author": "Dr. Rachel Kim"
+  }
+]

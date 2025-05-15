@@ -1,0 +1,162 @@
+[
+  {
+    "product": "Professional Basketball",
+    "brand": "Wilson",
+    "reviews": [
+      {
+        "user": "BasketballFan123",
+        "rating": 5,
+        "title": "Great grip and durability",
+        "comment": "This basketball has excellent grip and holds up well on both indoor and outdoor courts. Highly recommend!",
+        "date": "2023-10-15"
+      },
+      {
+        "user": "HoopsMaster",
+        "rating": 4,
+        "title": "Good ball but a bit heavy",
+        "comment": "The quality is great but it feels slightly heavier than other official balls I've used.",
+        "date": "2023-09-22"
+      }
+    ]
+  },
+  {
+    "product": "Premium Yoga Mat",
+    "brand": "Lululemon",
+    "reviews": [
+      {
+        "user": "YogaLover",
+        "rating": 5,
+        "title": "Worth every penny",
+        "comment": "The thickness and grip are perfect. No more slipping during hot yoga sessions!",
+        "date": "2023-11-05"
+      },
+      {
+        "user": "ZenMaster",
+        "rating": 5,
+        "title": "Best mat I've owned",
+        "comment": "Super comfortable and easy to clean. The carrying strap is a nice bonus.",
+        "date": "2023-10-30"
+      }
+    ]
+  },
+  {
+    "product": "Complete Soccer Kit",
+    "brand": "Adidas",
+    "reviews": [
+      {
+        "user": "SoccerPro99",
+        "rating": 4,
+        "title": "Great quality kit",
+        "comment": "The fabric is breathable and comfortable. Only wish there were more color options.",
+        "date": "2023-09-18"
+      },
+      {
+        "user": "TeamCaptain",
+        "rating": 5,
+        "title": "Perfect for our team",
+        "comment": "We got these customized with our team name and they look fantastic. Great moisture-wicking properties.",
+        "date": "2023-08-12"
+      }
+    ]
+  },
+  {
+    "product": "Olympic Weight Set",
+    "brand": "Rogue Fitness",
+    "reviews": [
+      {
+        "user": "GymRat",
+        "rating": 5,
+        "title": "Professional quality",
+        "comment": "The rubber coating protects my floors and the barbell spins perfectly. Worth the investment.",
+        "date": "2023-07-25"
+      },
+      {
+        "user": "PowerLifter",
+        "rating": 5,
+        "title": "Exceptional set",
+        "comment": "The plates are perfectly balanced and the barbell has great knurling. No complaints!",
+        "date": "2023-06-14"
+      }
+    ]
+  },
+  {
+    "product": "Premium Hiking Backpack",
+    "brand": "The North Face",
+    "reviews": [
+      {
+        "user": "MountainExplorer",
+        "rating": 5,
+        "title": "Survived the Rockies",
+        "comment": "This backpack carried all my gear comfortably through a week in the Rockies. Waterproofing works great.",
+        "date": "2023-08-30"
+      },
+      {
+        "user": "TrailBlazer",
+        "rating": 4,
+        "title": "Great pack, heavy when empty",
+        "comment": "Love all the features but it's a bit heavier than other packs before you even load it.",
+        "date": "2023-07-15"
+      }
+    ]
+  },
+  {
+    "product": "Performance Running Shorts",
+    "brand": "Nike",
+    "reviews": [
+      {
+        "user": "MarathonRunner",
+        "rating": 4,
+        "title": "Light and comfortable",
+        "comment": "Great for long runs. The liner is supportive without being restrictive.",
+        "date": "2023-09-10"
+      },
+      {
+        "user": "SpeedDemon",
+        "rating": 3,
+        "title": "Good but runs small",
+        "comment": "Had to size up. The material is nice but the fit was tighter than expected.",
+        "date": "2023-08-05"
+      }
+    ]
+  },
+  {
+    "product": "Sports Water Bottle",
+    "brand": "Hydro Flask",
+    "reviews": [
+      {
+        "user": "HydrationKing",
+        "rating": 5,
+        "title": "Keeps water cold for days",
+        "comment": "Seriously impressive insulation. My water stays cold through entire day-long hikes.",
+        "date": "2023-10-20"
+      },
+      {
+        "user": "FitnessGuru",
+        "rating": 5,
+        "title": "Best water bottle ever",
+        "comment": "No condensation, no leaks, and the wide mouth is perfect for adding ice. Worth the price.",
+        "date": "2023-09-12"
+      }
+    ]
+  },
+  {
+    "product": "Professional Basketball",
+    "brand": "Wilson",
+    "additional_reviews": [
+      {
+        "user": "CourtKing",
+        "rating": 5,
+        "title": "Perfect for serious players",
+        "comment": "The grip is outstanding even when your hands get sweaty. True professional quality.",
+        "date": "2023-11-01"
+      },
+      {
+        "user": "BallIsLife",
+        "rating": 4,
+        "title": "Great outdoor ball",
+        "comment": "Holds up well on concrete courts. Only reason not 5 stars is the color faded slightly over time.",
+        "date": "2023-10-10"
+      }
+    ]
+  }
+]
