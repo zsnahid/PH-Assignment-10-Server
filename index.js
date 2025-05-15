@@ -152,7 +152,7 @@ async function run() {
       }
     });
 
-    // Get all equipment with discounted prices
+    // Get all equipment with discounted prices - must be before :id route
     app.get("/equipments/discounted", async (req, res) => {
       try {
         const query = { price: { $lt: "$originalPrice" } };
